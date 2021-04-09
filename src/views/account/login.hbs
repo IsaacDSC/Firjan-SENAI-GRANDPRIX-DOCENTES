@@ -1,0 +1,30 @@
+<section class="wf100 p80">
+    <div class="container">
+        <div class="row">
+            <div class="col"></div>
+            <div class="col-lg-6">
+                <div class="login-box">
+                    <h3 class="text-center">Área de Login</h3>
+                    {{>_msg}}
+                    <form  action="/account/login" method="POST">
+                        <div class="input-group">
+                            <input type="text" name="username" class="form-control" placeholder="Username/Email" required>
+                        </div>
+                        <div class="input-group">
+                            <input type="password" name="password" class="form-control" placeholder="Senha" required>
+                        </div>
+                        <div class="input-group form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck2">
+                            <label class="form-check-label" for="exampleCheck2">Lembrar-me</label>
+                            {{!-- <a href="#" class="fp">Esqueci a senha</a> --}}
+                        </div>
+                        <div class="input-group">
+                            <button class="login-btn">Entrar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col"></div>
+        </div>
+    </div>
+</section>
