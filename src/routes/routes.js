@@ -20,6 +20,7 @@ router.get('/', home.index)
 router.get('/competition', auth, home.competitions)
 router.get('/tutors', auth, home.tutors)
 router.post('/schedule', auth, home.schedule)
+router.post('/demand',  home.demand)
 
 
 

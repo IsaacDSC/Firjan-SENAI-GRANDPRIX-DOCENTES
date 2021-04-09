@@ -4,6 +4,7 @@ const { DATA } = require('../../data/user')
 const { transporter } = require('../helpers/email')
 const db = require('../database/conn/sql')
 const schedule = require('../database/models/schedule')
+const Team = require('../database/models/Team')
 
 class Home {
     index(req, res) {
@@ -36,6 +37,30 @@ class Home {
             }).catch((err) => {
                 res.redirect('/')
             })
+        })
+    }
+
+    demand(req, res) {
+        console.log(req.body)
+        const { turma1, modalidade1, turma2, modalidade2, turma3, modalidade3, team, user01, user02, user03, user04, user05 } = req.body
+        Team.create({
+            nameTeam: team,
+            turmaOne: turma1,
+            turmaTow: turma2,
+            turmaThree: turma3,
+            modaly_one: modalidade1,
+            modaly_tow: modalidade2,
+            modaly_three: modalidade3,
+            studentsOne: user01,
+            studentsTow: user02,
+            studentsThree: user03,
+            studentsFor: user04,
+            studentsFive: user05
+        }).then(() => {
+            req.flash('success_msg', 'Demanda cadastrada com sucesso!')
+            res.redirect('/tutors')
+        }).catch((err) => {
+            console.log(err)
         })
     }
 
