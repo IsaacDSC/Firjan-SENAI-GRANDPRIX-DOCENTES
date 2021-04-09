@@ -5,26 +5,31 @@
                 <div class="col">
                     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                         <div class="container-fluid">
-                            <a class="navbar-brand" href="#">Navbar</a>
+                            <a class="navbar-brand" href="/">
+                                <i class="fas fa-gamepad"></i>
+                                SPI OF GAMER
+                            </a>
                             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                                 aria-expanded="false" aria-label="Toggle navigation">
                                 <span class="navbar-toggler-icon"></span>
                             </button>
                             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ml-5">
                                     <li class="nav-item">
-                                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                                        <a class="nav-link active" aria-current="page" href="/">
+                                            INICIO
+                                        </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="#">Link</a>
+                                        <a class="nav-link" href="/competition">ETAPAS</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link disabled" href="#" tabindex="-1"
-                                            aria-disabled="true">Disabled</a>
+                                        <a class="nav-link" href="/tutors">TUTORIAS</a>
                                     </li>
                                 </ul>
                                 <form class="d-flex">
+                                    {{#if users}}
                                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                                             <li class="nav-item dropdown">
@@ -34,17 +39,43 @@
                                                     <i class="fas fa-coins"></i>
                                                 </a>
                                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                                    <li><a class="dropdown-item" href="#">ENTRAR</a></li>
-                                                    <li><a class="dropdown-item" href="#">SAIR</a></li>
+                                                    <li>
+                                                        <a class="dropdown-item" href="#">
+                                                            <i class="fas fa-user-graduate"></i>
+                                                            MENTORIA
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="dropdown-item" href="#">
+                                                            <i class="fab fa-facebook-square"></i>
+                                                            Compartilhar
+                                                        </a>
+                                                    </li>
                                                     <li>
                                                         <hr class="dropdown-divider">
                                                     </li>
-                                                    <li><a class="dropdown-item" href="#">Registrar</a>
+                                                    <li>
+                                                        <a class="dropdown-item" href="/account/logout">
+                                                            <i class="fas fa-power-off"></i>
+                                                            SAIR</a>
                                                     </li>
                                                 </ul>
                                             </li>
                                         </ul>
                                     </div>
+                                    {{else}}
+                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                        <a href="/admin" class="btn btn-info text-light mr-3">
+                                        <i class="fas fa-user-astronaut"></i>
+                                        Entrar
+                                    </a>
+                                    <a href="/account/register" class="btn btn-info text-light">
+                                        <i class="fas fa-space-shuttle"></i>
+                                        Cadastrar
+                                    </a>
+                                    </div>
+
+                                    {{/if}}
                                 </form>
                             </div>
                         </div>

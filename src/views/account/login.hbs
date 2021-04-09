@@ -1,30 +1,70 @@
-<section class="wf100 p80">
-    <div class="container">
-        <div class="row">
-            <div class="col"></div>
-            <div class="col-lg-6">
-                <div class="login-box">
-                    <h3 class="text-center">Área de Login</h3>
-                    {{>_msg}}
-                    <form  action="/account/login" method="POST">
-                        <div class="input-group">
-                            <input type="text" name="username" class="form-control" placeholder="Username/Email" required>
-                        </div>
-                        <div class="input-group">
-                            <input type="password" name="password" class="form-control" placeholder="Senha" required>
-                        </div>
-                        <div class="input-group form-check">
-                            <input type="checkbox" class="form-check-input" id="exampleCheck2">
-                            <label class="form-check-label" for="exampleCheck2">Lembrar-me</label>
-                            {{!-- <a href="#" class="fp">Esqueci a senha</a> --}}
-                        </div>
-                        <div class="input-group">
-                            <button class="login-btn">Entrar</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-            <div class="col"></div>
-        </div>
+<div class="login-box">
+    <div class="login-logo">
+        <i class="fas fa-gamepad"></i>
+        <a href="http://solutionstech.com.br/"><b></b>
+            <h1 class="text-center">
+                <strong>
+                    GAMER OF SPI
+                </strong>
+            </h1>
+        </a>
     </div>
-</section>
+    <!-- /.login-logo -->
+
+    <div class="card">
+        <div class="card-body login-card-body" style="background-color: rgba(52, 5, 95, 0.87); color: white;">
+            <p class="login-box-msg text-light">Adquira Experiência e Diversão!</p>
+            {{>_msg}}
+            <form action="/account/login" method="POST">
+                <div class="input-group mb-3">
+                    <input type="text" name="username" class="form-control" placeholder="Digite seu e-mail">
+                    <div class="input-group-append">
+                        <div class="input-group-text">
+                            <span class="fas fa-user"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="input-group mb-3">
+                    <input type="password" name="password" class="form-control" placeholder="Digite sua senha">
+                    <div class="input-group-append">
+                        <div class="input-group-text">
+                            <span class="fas fa-lock"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-8">
+                        <div class="icheck-primary">
+                            <input type="checkbox" id="remember">
+                            <label for="remember text-light" style="color: white;">
+                                Lembrar-me
+                            </label>
+                        </div>
+                    </div>
+                    <!-- /.col -->
+                    <div class="col-4">
+                        <button class="btn btn-info btn-block">Entrar</button>
+                    </div>
+                    <!-- /.col -->
+                </div>
+            </form>
+
+            {{!-- <div class="social-auth-links text-center mb-3">
+        <p>- OR -</p>
+        <a href="#" class="btn btn-block btn-primary">
+          <i class="fab fa-facebook mr-2"></i> Sign in using Facebook
+        </a>
+        <a href="#" class="btn btn-block btn-danger">
+          <i class="fab fa-google-plus mr-2"></i> Sign in using Google+
+        </a>
+      </div> --}}
+            <!-- /.social-auth-links -->
+
+            <p class="mb-1">
+                <a href="/account/forgot" class="text-light">Esqueci minha senha</a>
+            </p>
+        </div>
+        <!-- /.login-card-body -->
+    </div>
+</div>
+<!-- /.login-box -->

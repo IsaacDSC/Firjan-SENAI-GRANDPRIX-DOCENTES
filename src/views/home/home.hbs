@@ -1,3 +1,4 @@
+{{>_participar}}
 <div class="containter">
     <div class="containter">
         <div class="card">
@@ -25,10 +26,21 @@
                                     </div>
 
                                     <div class="carousel-caption d-none d-md-block">
-                                        <h5 class="text-light">First slide label</h5>
-                                        <p class="text-light">Some representative placeholder content for the first
-                                            slide.</p>
-                                        <button class="btn btn-info col-6 text-light">PARTICIPAR</button>
+                                        <div class="container" style="width: 500px;" id="purple-card">
+                                            <h5 class="text-ligh" id="purple-title"><strong>
+                                                    Jornada GSPI
+                                                </strong></h5>
+                                            <p id="purple-text" class="text-light">"De todos os jogos, o do amor é o
+                                                único capaz de transtornar a alma e, ao mesmo tempo, o único no qual o
+                                                jogador se abandona necessariamente ao delírio do corpo."</p>
+                                            <p style="font-size: 10px;">
+                                                <small>Marguerite Yourcenar</small>
+                                            </p>
+
+                                            <button type="button" class="btn btn-outline-info col-6 text-light mb-3"
+                                                data-bs-toggle="modal" data-bs-target="#participar"><i
+                                                    class="fas fa-flag-checkered"></i> PARTICIPAR</button>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="carousel-item">
@@ -41,13 +53,25 @@
                                         <div class="col"></div>
                                     </div>
                                     <div class="carousel-caption d-none d-md-block">
-                                        <h5>Second slide label</h5>
-                                        <p>Some representative placeholder content for the second slide.</p>
-                                        <button class="btn btn-info col-6 text-light">PARTICIPAR</button>
+                                        <div class="container" style="width: 500px;" id="purple-card">
+                                            <h5 id="purple-title">
+                                                <strong>
+                                                    Equipe GSPI
+                                                </strong></h5>
+                                            <p id="purple-text">"O talento vence jogos, mas só o trabalho em equipe
+                                                ganha
+                                                campeonatos".</p>
+                                            <p style="font-size: 10px;">
+                                                <small>Michael Jordan</small>
+                                            </p>
+                                            <button type="button" class="btn btn-outline-info col-6 text-light mb-3"
+                                                data-bs-toggle="modal" data-bs-target="#participar"><i
+                                                    class="fas fa-flag-checkered"></i> PARTICIPAR</button>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="carousel-item">
-                                   <div class="row">
+                                    <div class="row">
                                         <div class="col"></div>
                                         <div class="col">
                                             <img src="/images/banner/03.jpg" class="alingt-center" width="700"
@@ -56,9 +80,20 @@
                                         <div class="col"></div>
                                     </div>
                                     <div class="carousel-caption d-none d-md-block">
-                                        <h5>Third slide label</h5>
-                                        <p>Some representative placeholder content for the third slide.</p>
-                                        <button class="btn btn-info col-6 text-light">PARTICIPAR</button>
+                                        <div class="container" style="width: 500px;" id="purple-card">
+                                            <h5 id="purple-title"><strong>
+                                                    INOVA
+                                                </strong></h5>
+                                            <p id="purple-text">"É fazendo que se aprende a fazer aquilo que se deve
+                                                aprender a fazer"
+                                            </p>
+                                            <p style="font-size: 10px;">
+                                                <small>Artistóteles</small>
+                                            </p>
+                                            <button type="button" class="btn btn-outline-info col-6 text-light mb-3"
+                                                data-bs-toggle="modal" data-bs-target="#participar"><i
+                                                    class="fas fa-flag-checkered"></i> PARTICIPAR</button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -78,57 +113,112 @@
                 <hr>
                 <h1 class="text-center mt-5">CONFIRA NOSSO GAME_SPI</h1>
                 <hr>
-                <div class="row">
-                    <div class="col-6">
-                        <div class="row">
-                            <div class="col">
-                                <label for="">Turmas</label>
-                                <input type="text" name="" id="" class="form-control">
-                            </div>
-                            <div class="col">
-                                <label for="">Modalidade</label>
-                                <input type="text" name="" id="" class="form-control">
+                <div class="row mt-2">
+                    <div class="col ml-5">
+                        <div class="card mb-3" style="max-width: 100%;">
+                            <div class="row g-0">
+                                <div class="col-md-4 mt-1 mb-3">
+                                    <img src="/images/ranking.png" width="300" alt="/images/demo.jpg">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h5 class="card-title">CONFIRAS OS TIMES EM 3 PRIMEIROS</h5>
+                                        <hr>
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+                                                    <div class="card-header">1º Lugar</div>
+                                                    <div class="card-body">
+                                                        <h5 class="card-title">
+                                                            <i class="fas fa-users"></i>
+                                                            Equipe Roxo
+                                                        </h5>
+                                                        <p class="card-text">
+                                                            <strong>
+                                                               <i class="fas fa-vials"></i>
+                                                            </strong> TI - AUTOMAÇÃO - MECÂNICA
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                               <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
+                                                    <div class="card-header">2º Lugar</div>
+                                                    <div class="card-body">
+                                                        <h5 class="card-title">
+                                                            <i class="fas fa-users"></i>
+                                                            Equipe Roxo
+                                                        </h5>
+                                                        <p class="card-text">
+                                                            <strong>
+                                                               <i class="fas fa-vials"></i>
+                                                            </strong> TI - AUTOMAÇÃO - MECÂNICA
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                               <div class="card text-white bg-danger mb-3" style="max-width: 18rem;">
+                                                    <div class="card-header">3º Lugar</div>
+                                                    <div class="card-body">
+                                                        <h5 class="card-title">
+                                                            <i class="fas fa-users"></i>
+                                                            Equipe Roxo
+                                                        </h5>
+                                                        <p class="card-text">
+                                                            <strong>
+                                                               <i class="fas fa-vials"></i>
+                                                            </strong> TI - AUTOMAÇÃO - MECÂNICA
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small>
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <hr>
-                <div class="row">
+                <div class="row mt-5">
                     <div class="col">
-                        <div class="row">
-                            <div class="col mt-2">
-                                <input type="text" name="" id="" class="form-control mt-2" placeholder="Integrante">
-                                <input type="text" name="" id="" class="form-control mt-2" placeholder="Integrante">
-                            </div>
-                            <div class="col mt-2">
-                                <input type="text" name="" id="" class="form-control mt-2" placeholder="Integrante">
-                                <input type="text" name="" id="" class="form-control mt-2" placeholder="Integrante">
-                            </div>
-                            <div class="col mt-2">
-                                <input type="text" name="" id="" class="form-control mt-2 " placeholder="Integrante">
+                        <div class="card mb-3" style="max-width: 540px;">
+                            <div class="row g-0">
+                                <div class="col-md-4 mt-5">
+                                    <img src="/images/demo.jpg" width="150" alt="/images/demo.jpg">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Projetos em Destaque</h5>
+                                        <p class="card-text">This is a wider card with supporting text below as a
+                                            natural lead-in to additional content. This content is a little bit longer.
+                                        </p>
+                                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small>
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="col">
-                        <div class="row">
-                            <div class="col">
-                                <h5>JOGAR</h5>
-                                <hr>
-                                <h6><strong>DEMANDA: </strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                </h6>
-                                <h6><strong>DESCRIÇÃO DA DEMANDA: </strong>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pulvinar enim erat,
-                                    id semper odio ultrices ac. Pellentesque at accumsan ipsum. Class aptent taciti
-                                    sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce
-                                    viverra nisl vitae felis efficitur, non sollicitudin dolor tempus. Aliquam sit amet
-                                    ullamcorper magna, ac congue nisi. Vestibulum ante ipsum primis in faucibus orci
-                                    luctus et ultrices posuere cubilia curae; Integer facilisis pharetra tortor. Donec
-                                    eu nisl quis dui ornare vulputate placerat vitae diam. Nulla rutrum aliquam
-                                    porttitor. Sed pellentesque dictum ex, ut pulvinar massa dapibus nec. Aliquam cursus
-                                    ipsum nec tempor elementum.
-                                </h6>
-                                <hr>
-                                <button class="btn btn-info col-12">JOGAR AGORA</button>
+                        <div class="card mb-3" style="max-width: 540px;">
+                            <div class="row g-0">
+                                <div class="col-md-4 mt-5">
+                                    <img src="/images/demo.jpg" width="150" alt="/images/demo.jpg">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Projetos em Destaque</h5>
+                                        <p class="card-text">This is a wider card with supporting text below as a
+                                            natural lead-in to additional content. This content is a little bit longer.
+                                        </p>
+                                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small>
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

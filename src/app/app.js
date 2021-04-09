@@ -7,9 +7,11 @@ const cors = require('cors')
 const path = require('path')
 const router = require('../routes/routes')
 const config = require('../config/config')
-// const passport = require('passport')
-// // require('../middlewares/checkAdmin')(passport)
-// const { createTable,createAdmin } = require('../database/initializeDB')
+const passport = require('passport')
+require('../middlewares/checkAdmin')(passport)
+const { CONFIG, initTables } = require('../config/config')
+const { createSuperUser } = require('../config/init/superuser')
+
 
 class App {
     constructor() {
@@ -17,10 +19,10 @@ class App {
         this.middlewares()
         this.session()
         this.flash()
-        // this.passport()
+        this.passport()
         this.routes()
         this.engine()
-        // this.config()
+        this.config()
     }
     middlewares() {
         this.express.use(bodyParser.urlencoded({ extended: false }))
@@ -48,19 +50,18 @@ class App {
         })
     }
 
-    // passport() {
-    //     this.express.use(passport.initialize())
-    //     this.express.use(passport.session())
-    // }
+    passport() {
+        this.express.use(passport.initialize())
+        this.express.use(passport.session())
+    }
 
     routes() {
         this.express.use(router)
     }
 
     config() {
-        if (config.CONFIGURATIONS.tables == true) createTable()
-        if(config.CONFIGURATIONS.relationship == true) console.log('relationship')
-        if(config.CONFIGURATIONS.createAdmin == true) createAdmin()
+        if (CONFIG.initTables) initTables()
+        if (CONFIG.createSuperuser) createSuperUser()
     }
 
     engine() {

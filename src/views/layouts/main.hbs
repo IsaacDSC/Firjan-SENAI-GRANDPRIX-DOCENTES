@@ -15,8 +15,11 @@
         body {
             /*
             background-color: purple;
+            background-image: url("/images/background.jpg");
+            background-image: url("/images/fundoTecnologyPurple.jpg");
+            background-image: url("/images/fundoGamer.jpg");
              */
-            background-image: url("/images/fundo.jpeg");
+            background-image: url("/images/fundoLampada.jpg");
         }
 
         .card {
@@ -34,11 +37,22 @@
         small {
             color: white;
         }
+
+        #purple-card h5 {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 54px;
+        }
+
+        #purple-card {
+            border-radius: 15px;
+            background-color: rgba(0, 0, 0, 0.514);
+            width: 500px;
+        }
     </style>
 </head>
 
 <body>
-
+    {{>_register}}
     {{>_nav}}
     <div class="container mt-2">
         {{{body}}}

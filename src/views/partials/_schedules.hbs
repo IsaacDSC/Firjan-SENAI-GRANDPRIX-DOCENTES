@@ -1,0 +1,31 @@
+<div class="modal" tabindex="-1" id="schedule">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title text-dark">Agendamento</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <form action="/schedule" method="post">
+        <div class="modal-body">
+          <div class="container">
+            <div class="row">
+              <div class="col">
+                <h5 class="text-dark">Data</h5>
+                <input type="date" name="date" id="date" class="form-control mt-2">
+                <h5 class="text-dark">Horário</h5>
+                <input type="time" name="hr" id="hr" class="form-control mt-2">
+                <h5 class="text-dark">Assunto</h5>
+                <textarea name="subject" id="subject" cols="30" rows="5" class="form-control mt-2">Assunto:
+              </textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+          <button type="submit" class="btn btn-primary">Enviar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
